@@ -13,7 +13,7 @@
         <ul>
             @foreach($gifts as $gift)
                 <li class="bg-gray-200 p-2 m-2 rounded-lg">
-                    <a href="{{ $gift->url }}" target="_blank">{{ $gift->name }}</a>
+                    <strong>{{ $gift->type }}</strong> <a href="{{ $gift->url }}" target="_blank">{{ $gift->name }}</a>
                 </li>
             @endforeach
         </ul>
