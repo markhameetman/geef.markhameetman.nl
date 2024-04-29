@@ -13,10 +13,10 @@ class Gift extends Model
 
     public function getUrlAttribute()
     {
-        if (strpos($this->attributes['url'], 'bol.com') === true) {
+        if (strpos($this->attributes['url'], 'bol.com') !== false) {
             $partner_id = '1015523';
             return 'https://partner.bol.com/click/click?p=2&t=url&s=' . $partner_id . '&f=TXL&url=' . urlencode($this->attributes['url']) . '&name=bureau.partners';
-        } elseif (strpos($this->attributes['url'], 'coolblue') === true) {
+        } elseif (strpos($this->attributes['url'], 'coolblue') !== false) {
             $partner_id = '1100l7NC9';
             return 'https://prf.hn/click/camref:' . $partner_id . '/pubref:share.bureau.partners/destination:' . urlencode($this->attributes['url']);
         } else {
